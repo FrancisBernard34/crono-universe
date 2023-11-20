@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100vh;
+}
+
+.container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: url("./public/background.jpg") no-repeat 100% 100%;
+  background-size: cover;
+}
+
+.timer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border: 1px solid rgb(137, 60, 71);
+  animation: border-color 5s infinite;
+  border-radius: 13px;
+  
+}
+
+@keyframes border-color {
+  0% {
+    border-color: rgb(207, 9, 112);
+  } /* Rosa */
+  25% {
+    border-color: rgb(154, 94, 253);
+  } /* Roxo */
+  50% {
+    border-color: rgb(231, 224, 190);
+  } /* Amarelo */
+  75% {
+    border-color: rgb(255, 174, 66);
+  } /* Laranja */
+  100% {
+    border-color: rgb(207, 9, 112);
+  } /* Rosa */
+}
+
+.text-gradient {
+  font-size: 2em;
+  background: -webkit-linear-gradient(rgb(207, 9, 112), rgb(255, 174, 66), rgb(231, 224, 190), rgb(154, 94, 253));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+ }
+
+.timer__clock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  border-radius: 13px;
+}
+
+.timer__clock__hours {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.timer__clock_minutes {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.timer__clock_seconds {
+  font-size: 5rem;
+  font-weight: 700;
+  color: #000;
+}
+
+.timer__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  user-select: none;
+}
+
+.timer__buttons button {
+  margin: 0 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  outline: 0;
+  background: -webkit-linear-gradient(rgb(255, 174, 66), rgb(231, 224, 190), rgb(154, 94, 253));
+  opacity: 0.7;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  color: rgb(207, 9, 112);
+  font-family: mono;
+  transition: all 0.3s;
+}
+
+.timer__buttons button:hover {
+  background: -webkit-linear-gradient(rgb(154, 94, 253), rgb(231, 224, 190), rgb(255, 174, 66));
+  filter: brightness(1.2);
+}
