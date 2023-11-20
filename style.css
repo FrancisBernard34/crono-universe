@@ -94,6 +94,7 @@ main {
 .timer__buttons {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   align-items: center;
   margin-top: 2rem;
   user-select: none;
@@ -117,4 +118,16 @@ main {
 .timer__buttons button:hover {
   background: -webkit-linear-gradient(rgb(154, 94, 253), rgb(231, 224, 190), rgb(255, 174, 66));
   filter: brightness(1.2);
+}
+
+@media only screen and (max-width: 400px) {
+  .timer__buttons {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .timer__buttons button {
+    width: 10rem;
+    height: 3rem;
+  }
 }
